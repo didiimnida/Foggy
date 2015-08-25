@@ -1,12 +1,14 @@
-package dianahilton.com.foggy;
+package dianahilton.com.foggy.weather;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import dianahilton.com.foggy.R;
+
 /**
  * Created by Diana on 8/14/15.
  */
-public class CurrentWeather {
+public class Current {
     private String mIcon;
     private long mTime;
     private double mTemperature;

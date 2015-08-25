@@ -1,10 +1,12 @@
-package dianahilton.com.foggy;
+package dianahilton.com.foggy.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import dianahilton.com.foggy.R;
 
 /**
  * Created by Diana on 8/13/15.
