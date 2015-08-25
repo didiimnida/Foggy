@@ -2,7 +2,6 @@ package dianahilton.com.foggy;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.TimeZone;
 
 /**
  * Created by Diana on 8/14/15.
@@ -65,7 +64,7 @@ public class CurrentWeather {
 
     public String getFormattedTime(){
         SimpleDateFormat formatter = new SimpleDateFormat("h:mm a");
-        formatter.setTimeZone(TimeZone.getTimeZone(getTimeZone()));
+//        formatter.setTimeZone(TimeZone.getTimeZone(getTimeZone()));
         Date dateTime = new Date(getTime()*1000);
         String timeString = formatter.format(dateTime);
         return timeString;
@@ -75,8 +74,8 @@ public class CurrentWeather {
         mTime = time;
     }
 
-    public double getTemperature() {
-        return mTemperature;
+    public int getTemperature() {
+        return (int)Math.round(mTemperature);
     }
 
     public void setTemperature(double temperature) {
@@ -92,7 +91,8 @@ public class CurrentWeather {
     }
 
     public double getPrecipChange() {
-        return mPrecipChange;
+        double precipPercentage = mPrecipChange * 100;
+        return (int)Math.round(precipPercentage);
     }
 
     public void setPrecipChange(double precipChange) {
