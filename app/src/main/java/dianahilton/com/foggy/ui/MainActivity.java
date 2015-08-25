@@ -1,6 +1,7 @@
 package dianahilton.com.foggy.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -27,6 +28,7 @@ import java.io.IOException;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 import dianahilton.com.foggy.R;
 import dianahilton.com.foggy.weather.Current;
 import dianahilton.com.foggy.weather.Day;
@@ -245,5 +247,11 @@ public class MainActivity extends ActionBarActivity {
     private void alertUserAboutError() {
         AlertDialogFragment dialog = new AlertDialogFragment();
         dialog.show(getFragmentManager(),"error_dialog");
+    }
+
+    @OnClick (R.id.dailyButton)
+    public void startDailyActivity(View view){
+        Intent intent = new Intent(this, DailyForecastActivity.class);
+        startActivity(intent);
     }
 }
