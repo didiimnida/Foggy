@@ -1,6 +1,7 @@
 package dianahilton.com.foggy;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -102,8 +103,8 @@ public class MainActivity extends ActionBarActivity {
         mSummaryLabel.setText(mCurrentWeather.getSummary());
 
 
-//        Drawable drawable = getResources().getDrawable(mCurrentWeather.getIconId());
-//        mIconImageView.setImageDrawable(drawable);
+        Drawable drawable = getResources().getDrawable(mCurrentWeather.getIconId());
+        mIconImageView.setImageDrawable(drawable);
     }
 
     private CurrentWeather getCurrentDetails(String jsonData) throws JSONException {
